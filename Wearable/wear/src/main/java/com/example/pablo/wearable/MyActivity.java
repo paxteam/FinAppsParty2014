@@ -25,8 +25,8 @@ public class MyActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //THIS IS A STUB
-        ListItem l1 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.portaventura),1);
-        ListItem l2 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.nostrum),2);
+        ListItem l1 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.portaventura),1, "Port Aventura", "Descompte de un 40%");
+        ListItem l2 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.nostrum),2, "Nostrum", "Menú per 5.95€");
 
         elements = new ListItem[]{l1 , l2 };
 
@@ -57,14 +57,15 @@ public class MyActivity extends Activity
     @Override
     public void onClick(WearableListView.ViewHolder v) {
 
-           Integer tag = (Integer) v.itemView.getTag();
+        Integer tag = (Integer) v.itemView.getTag();
         ListItem i = elements[v.getPosition()];
         Intent intent = new Intent(this, MyActivity2.class);
-        //intent.putExtra("item", (Serializable) i);
+        intent.putExtra("item", (Serializable) i.getData());
         startActivity(intent);
     }
 
     @Override
     public void onTopEmptyRegionClick() {
-            }
+
+    }
 }

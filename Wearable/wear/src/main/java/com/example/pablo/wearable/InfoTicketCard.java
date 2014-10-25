@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class InfoTicketCard extends Fragment {
 
@@ -20,7 +21,9 @@ public class InfoTicketCard extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.info_ticket_card, container, false);
+        View v = inflater.inflate(R.layout.info_ticket_card, container, false);
+        ((TextView) v.findViewById(R.id.title)).setText(item.provider);
+        ((TextView) v.findViewById(R.id.discount)).setText(item.descr);
+        return v;
     }
-
 }

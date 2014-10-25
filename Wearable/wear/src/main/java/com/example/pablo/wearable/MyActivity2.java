@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.wearable.view.GridViewPager;
 import android.support.wearable.view.WatchViewStub;
+import android.view.LayoutInflater;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MyActivity2 extends Activity {
 
@@ -20,7 +23,9 @@ public class MyActivity2 extends Activity {
         setContentView(R.layout.activity_my_activity2);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         //final LayoutInflater inflater = getLayoutInflater();
-        //item = (ListItem) getIntent().getExtras().getSerializable("item");
+        item = new ListItem((ArrayList<String>) getIntent().getExtras().getSerializable("item"));
+
+
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
