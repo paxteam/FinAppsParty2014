@@ -27,8 +27,10 @@ public class MyActivity extends Activity
         //THIS IS A STUB
         ListItem l1 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.portaventura),1, "Port Aventura", "Descompte de un 40%");
         ListItem l2 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.nostrum),2, "Nostrum", "Menú per 5.95€");
+        ListItem l3 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.tibidabo),2, "Tibidabo", "2x1 En les entrades al parc");
+        ListItem l4 = new ListItem(BitmapFactory.decodeResource(getResources(),R.drawable.cocacola),2, "CocaCola", "Regalo de una taza por la compra de un pack de 20 latas");
 
-        elements = new ListItem[]{l1 , l2 };
+        elements = new ListItem[]{l1 , l2, l3, l4 };
 
 
         super.onCreate(savedInstanceState);
