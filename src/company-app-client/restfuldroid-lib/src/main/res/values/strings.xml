@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2014.
+  ~
+  ~ Restfullib is a library to facilitate the creation of an android app (client side) connected with server based on RESTful webservice.
+  ~
+  ~ This library has been created by xaviml
+  ~ https://github.com/xaviml
+  -->
+
+<resources>
+
+    <string name="app_name">restfuldroid-lib</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+</resources>
